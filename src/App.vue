@@ -1,7 +1,7 @@
 <template>
   <div class="bg"></div>
   <div class="box">
-    <h3>第 {{level}}关 </h3>
+    <h3>第 {{level}} 关 </h3>
     <div class="app">
       <div class="scene-container">
         <div class="scene-inner">
@@ -35,7 +35,7 @@
 </template>
 
 <script setup lang="ts">
-// 羊了个羊图片素材
+// 嵩了个嵩图片素材
 import icon1 from './assets/1bb1ee4cb_03.gif';
 import icon2 from './assets/1bb1ee4cb_06.gif';
 import icon3 from './assets/1bb1ee4cb_09.gif';
@@ -279,14 +279,14 @@ const clickSymbol = async (idx: number) => {
 
   // 当格子沾满了，那么久表示已经失败了
   if (queue.value.length === 7) {
-    tipText.value = '失败了'
+    tipText.value = '好可惜     再试一次!'
     finished.value = true;
   }
 
   if (!scene.value.find((s) => s.status !== 2)) {
     // 如果完成所有关卡，那就过了所有关了
     if (level.value === maxLevel) {
-      tipText.value = '完成挑战';
+      tipText.value = '恭喜你完成挑战！';
       finished.value = true
       return;
     }
@@ -344,13 +344,14 @@ a:hover {
 
 
 button {
-  border-radius: 8px;
+  border-radius: 8px; /*按钮圆角度*/
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.6em 1.2em; /* 距离边缘比例*/
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 800;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #6ca5fe;/*按钮背景颜色*/
+
   cursor: pointer;
   transition: border-color 0.25s;
   word-break: keep-all;
@@ -393,7 +394,8 @@ button:focus-visible {
   left: 0;
   bottom: 0;
   right: 0;
-  padding: 30px;
+  padding: 50px;/*保证小方块不会出界，原5px*/
+
 }
 
 .app {
@@ -405,7 +407,7 @@ button:focus-visible {
   width: 100%;
   padding-bottom: 100%;
   position: relative;
-  margin: 10% 0;
+  margin: 10% 0;/*相对于上下或左右留空的比例*/
 }
 
 .scene-inner {
@@ -437,13 +439,13 @@ button:focus-visible {
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  border: 2px solid #444;
+  border: 2.5px solid #444;/*方块描边粗细*/
   transition: 0.3s;
-  padding: 5px;
+  padding: 0;/*方块里图片距离边缘距离*/
 }
 
 .queue-container {
-  border-radius: 8px;
+  border-radius: 8px;/*队列圆角度*/
   width: 100%;
   padding-bottom: 15%;
   border: 2px solid gray;
@@ -454,7 +456,7 @@ button:focus-visible {
 
 .flex-container {
   display: flex;
-  gap: 8px;
+  gap: 8px;/*底下道具按钮彼此之间距离*/
 }
 
 .flex-center {
