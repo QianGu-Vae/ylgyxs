@@ -250,7 +250,7 @@ import item from './components/item.vue'
 import { ref, watchEffect } from 'vue'
 import { randomString, waitTimeout } from './utils';
 // 初始icon数组
-const icons = [icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10, icon11, icon12, icon13, icon14, icon15, icon16, icon17, icon18, icon19];
+/*const icons = [icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10, icon11, icon12, icon13, icon14, icon15, icon16, icon17, icon18, icon19];*/
 // 设置最大随机关卡
 const maxLevel = 50;
 // 以下感谢大佬们提供的算法
