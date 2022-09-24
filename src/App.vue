@@ -35,7 +35,6 @@
 </template>
 
 <script setup lang="ts">
-// 嵩了个嵩图片素材
 import icon1 from './assets/1bb1ee4cb_03.gif';
 import icon2 from './assets/1bb1ee4cb_06.gif';
 import icon3 from './assets/1bb1ee4cb_09.gif';
@@ -346,7 +345,7 @@ a:hover {
 button {
   border-radius: 8px; /*按钮圆角度*/
   border: 1px solid transparent;
-  padding: 0.6em 1.2em; /* 距离边缘比例*/
+  padding: 0.6em 0.5em; /* 距离边缘比例*/
   font-size: 1em;
   font-weight: 800;
   font-family: inherit;
