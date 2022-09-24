@@ -35,8 +35,8 @@
 </template>
 
 <script setup lang="ts">
-import icon1 from '@/assets/1bb1ee4cb_03.gif';
-import icon2 from '@/assets/1bb1ee4cb_06.gif';
+import icon1 from './assets/1bb1ee4cb_03.gif';
+import icon2 from './assets/1bb1ee4cb_06.gif';
 import icon3 from 'src/assets/1bb1ee4cb_09.gif';
 import icon4 from 'src/assets/1bb1ee4cb_12.gif';
 import icon5 from '../assets/1bb1ee4cb_13.gif';
