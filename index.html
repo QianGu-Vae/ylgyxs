@@ -6,52 +6,26 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>羊了个羊许嵩版</title>
-  <audio autoplay loop id="music">
-      <source src="秋千坠.mp3" type="audio/mp3" />
-              你的浏览器版本太低，不支持audio标签
-    </audio>
-   
-</head>
+  var audio ;
+        window.onload = function(){
+           initAudio();
+        }
+ 
+          document.addEventListener('touchstart', function(){
+             initAudio();
+        }, false);
 
+        var initAudio = function(){
+                audio = document.getElementById('audio');
+         }
+
+
+ <audio src="秋千坠.mp3" id="audio" controls="controls"  autoplay="autoplay" ></audio>
+</head>
 
 <body>
   <div id="app"></div>
-  <script type="module" src="/src/main.ts"></script>
-// 解决iOS禁止自动播放音频
-
-// 微信自动播放音频
-
-function audioAutoPlay(id){
-
-var audio = document.getElementById(id),
-
-play = function(){
-
-audio.play();
-
-document.removeEventListener("touchstart",play, false);
-
-};
-
-audio.play();
-
-document.addEventListener("WeixinJSBridgeReady", function () {
-
-play();
-
-}, false);
-
-document.addEventListener('YixinJSBridgeReady', function() {
-
-play();
-
-}, false);
-
-document.addEventListener("touchstart",play, false);
-
-}
-
-audioAutoPlay('Jaudio');
+  <script type="module" src="/src/main.ts"></script
 </body>
 
 </html>
