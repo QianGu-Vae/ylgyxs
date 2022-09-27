@@ -7,11 +7,9 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>羊了个羊许嵩版</title>
-  <audio autoplay loop id="music">
-      <source src="秋千坠.mp3" type="audio/mp3" />
-              你的浏览器版本太低，不支持audio标签
+
+  <audio id="success_music" src="/秋千坠.mp3" preload="auto">
     </audio>
-  
    
 </head>
 
@@ -19,6 +17,16 @@
 <body>
   <div id="app"></div>
   <script type="module" src="/src/main.ts"></script>
+  <script>
+  var audio_success = document.getElementById('success_music');
+  $("#start").on('click',function(){
+  audio_success.play();
+  audio_success.pause();
+  $.get("/test/test", function() {
+  audio_success.play();
+});
+});
+    </script>
 </body>
 
 </html>
