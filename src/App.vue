@@ -11,7 +11,7 @@
           }" @click="clickSymbol(index)">
             <div class="symbol-inner" :style="{ backgroundColor: item.isCover ? '#999' : 'white' }">
               <img style="width:100% ;" :src="item.icon" alt="">
-                <div class="symbol-inner" :style="{ filter: item.isCover ? 'brightness(45%)': 'brightness(100%)' }">
+                <div class="symbol-inner" :style="{ filter: item.isCover ? 'brightness(55%)': 'brightness(100%)' }">
                    <img style="width:100% ;" :src="item.icon" alt="">
                 </div>
             </div>
