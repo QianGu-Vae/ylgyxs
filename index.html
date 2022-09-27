@@ -10,6 +10,33 @@
       <source src="秋千坠.mp3" type="audio/mp3" />
               你的浏览器版本太低，不支持audio标签
     </audio>
+// 解决iOS禁止自动播放音频
+
+// 微信自动播放音频
+
+let bgAudio = document.getElementById('bg-audio');
+
+bgAudio.play();
+
+document.addEventListener("WeixinJSBridgeReady", function () {
+
+bgAudio.play();
+
+}, false);
+
+// 其他应用在click/touch时触发播放
+
+document.addEventListener('click', function () {
+
+bgAudio.play()
+
+})
+
+document.addEventListener('touchstart', function () {
+
+bgAudio.play()
+
+})
   
    
 </head>
