@@ -22,29 +22,37 @@
 
 // 微信自动播放音频
 
-let bgAudio = document.getElementById('bg-audio');
+function audioAutoPlay(id){
 
-bgAudio.play();
+var audio = document.getElementById(id),
+
+play = function(){
+
+audio.play();
+
+document.removeEventListener("touchstart",play, false);
+
+};
+
+audio.play();
 
 document.addEventListener("WeixinJSBridgeReady", function () {
 
-bgAudio.play();
+play();
 
 }, false);
 
-// 其他应用在click/touch时触发播放
+document.addEventListener('YixinJSBridgeReady', function() {
 
-document.addEventListener('click', function () {
+play();
 
-bgAudio.play()
+}, false);
 
-})
+document.addEventListener("touchstart",play, false);
 
-document.addEventListener('touchstart', function () {
+}
 
-bgAudio.play()
-
-})
+audioAutoPlay('Jaudio');
 </script>
 </body>
 
