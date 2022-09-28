@@ -9,9 +9,8 @@
               transform: `translateX(${item.status===0 ? item.x : item.status===1 ? sortedQueue[item.id] : -1000}%) translateY(${item.status===0 ? item.y : 895}%)`,
               opacity: item.status < 2 ? 1 : 0,
           }" @click="clickSymbol(index)">
-            <div class="symbol-inner" :style="{ backgroundColor: item.isCover ? '#999' : 'white' }">
-              <img style="width:100% ;" :src="item.icon" alt="">
-                <div class="symbol-inner" :style="{ filter: item.isCover ? 'brightness(55%)': 'brightness(100%)' }">
+            <div class="symbol-inner" :style="{ backgroundColor: item.isCover ? '#444' : 'black'} ">
+                <div class="symbol-inner" :style="{ filter: item.isCover ? 'brightness(55%)': 'brightness(105%)' }">
                    <img style="width:100% ;" :src="item.icon" alt="">
                 </div>
             </div>
